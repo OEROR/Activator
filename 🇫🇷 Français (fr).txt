@@ -1,0 +1,14 @@
+🇫🇷 Français (fr)
+Activateur Windows
+
+Description
+Ce projet est un activateur qui active réellement Windows. Une fois lancé, l'utilisateur voit une interface ressemblant à celle d'un vrai activateur, avec une commande pour PowerShell.
+Important ! Cet activateur active réellement Windows.
+
+Fonctionnalités
+
+Interface de style Windows : Belle imitation d’un vrai activateur.
+
+Commande PowerShell : Une commande générée à copier/coller.
+
+Facile à utiliser : Lancez simplement le fichier BAT.
