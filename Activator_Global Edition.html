@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>OEROR | Активация Windows</title>
+  <link rel="icon" href="https://img.icons8.com/color/48/windows-10.png">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Orbitron', sans-serif;
+      color: #00ffe7;
+      overflow: hidden;
+    }
+
+    .card {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 25px #00ffe7, 0 0 80px #00a6ff;
+      text-align: center;
+      max-width: 600px;
+      width: 90%;
+      animation: slideIn 1.2s ease;
+    }
+
+    h1 {
+      font-size: 30px;
+      margin-bottom: 20px;
+      color: #ffffff;
+      text-shadow: 0 0 10px #00ffe7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    p {
+      opacity: 0.85;
+      margin-bottom: 20px;
+      color: #ccc;
+    }
+
+    code {
+      display: block;
+      background: #101820;
+      padding: 15px 20px;
+      border-radius: 12px;
+      font-size: 16px;
+      margin: 20px 0;
+      color: #00ffc8;
+      border: 1px solid #00ffe7;
+      box-shadow: inset 0 0 10px #00ffe7;
+    }
+
+    button {
+      background: linear-gradient(90deg, #00ffe7, #00a6ff);
+      color: #000;
+      font-size: 18px;
+      padding: 5px 190px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 0 15px #00ffe7;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px #00ffe7, 0 0 40px #00a6ff;
+    }
+
+    .footer {
+      margin-top: 35px;
+      font-size: 14px;
+      color: #00d1ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      opacity: 0.8;
+    }
+
+    .footer a {
+      color: #00ffe7;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    img.icon {
+      width: 24px;
+      height: 24px;
+      vertical-align: middle;
+    }
+
+    select {
+      margin-top: 20px;
+      padding: 10px;
+      font-size: 1em;
+      border-radius: 8px;
+      border: none;
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>
+      <img class="icon" src="https://img.icons8.com/color/48/windows-10.png" alt="Windows">
+      <span id="title">Активация Windows</span>
+    </h1>
+    <p id="description">Нажми на кнопку и всё произойдёт автоматически:</p>
+    <code id="command">irm https://get.activated.win | iex</code>
+    <button onclick="runActivation()">
+      <img class="icon" src="https://img.icons8.com/fluency/48/powershell.png" alt="PowerShell">
+      <span id="button-text">Копировать и открыть PowerShell</span>
+    </button>
+    <select id="language-selector">
+      <option value="ru">🇷🇺 Русский</option>
+      <option value="en">🌍 English</option>
+      <option value="zh">🇨🇳 中文</option>
+      <option value="be">🇧🇾 Беларуская</option>
+      <option value="es">🇪🇸 Español</option>
+      <option value="de">🇩🇪 Deutsch</option>
+      <option value="fr">🇫🇷 Français</option>
+      <option value="ja">🇯🇵 日本語</option>
+      <option value="ar">🇸🇦 العربية</option>
+    </select>
+    <div class="footer">
+      <img class="icon" src="https://img.icons8.com/color/48/user-group-man-man.png" alt="Автор">
+      Сделано <a href="https://www.youtube.com/@OEROR" target="_blank">OEROR</a> и ChatGPT 🤝
+    </div>
+  </div>
+
+  <script>
+    const translations = {
+      ru: {
+        title: "Активация Windows",
+        description: "Нажми на кнопку и всё произойдёт автоматически:",
+        button: "Копировать и открыть PowerShell откройте bat"
+      },
+      en: {
+        title: "Windows Activation",
+        description: "Click the button and everything will happen automatically:",
+        button: "Copy and Open PowerShell Open bat"
+      },
+      zh: {
+        title: "激活 Windows",
+        description: "点击按钮，一切将自动完成：",
+        button: "复制并打开 PowerShell Open bat"
+      },
+      be: {
+        title: "Актывацыя Windows",
+        description: "Націсніце кнопку, і ўсё адбудзецца аўтаматычна:",
+        button: "Скапіраваць і адкрыць PowerShell Open bat"
+      },
+      es: {
+        title: "Activación de Windows",
+        description: "Haz clic en el botón y todo sucederá automáticamente:",
+        button: "Copiar y abrir PowerShell Open bat"
+      },
+      de: {
+        title: "Windows-Aktivierung",
+        description: "Klicken Sie auf die Schaltfläche und alles wird automatisch ausgeführt:",
+        button: "Kopieren und PowerShell öffnen Open bat"
+      },
+      fr: {
+        title: "Activation de Windows",
+        description: "Cliquez sur le bouton et tout se fera automatiquement :",
+        button: "Copier et ouvrir PowerShell Open bat"
+      },
+      ja: {
+        title: "Windows のアクティベーション",
+        description: "ボタンをクリックすると、自動的に実行されます：",
+        button: "コピーして PowerShell を開く Open bat"
+      },
+      ar: {
+        title: "تنشيط Windows",
+        description: "انقر على الزر وسيتم كل شيء تلقائيًا:",
+        button: "انسخ وافتح PowerShell Open bat"
+      }
+    };
+
+    document.getElementById("language-selector").addEventListener("change", e => {
+      updateLanguage(e.target.value);
+    });
+
+    function updateLanguage(lang) {
+      const t = translations[lang];
+      if (t) {
+        document.getElementById("title").innerText = t.title;
+        document.getElementById("description").innerText = t.description;
+        document.getElementById("button-text").innerText = t.button;
+      }
+    }
+
+    const browserLang = navigator.language.slice(0, 2);
+    if (translations[browserLang]) {
+      document.getElementById("language-selector").value = browserLang;
+      updateLanguage(browserLang);
+    }
+
+    function runActivation() {
+      const command = document.getElementById("command").innerText;
+      navigator.clipboard.writeText(command).then(() => {
+        alert("Команда скопирована! Сейчас откроется PowerShell...");
+        const blob = new Blob([
+          '@echo off\n',
+          'start powershell\n'
+        ], { type: 'application/octet-stream' });
+        const link = document.createElement("a");
+        link.href = URL.createObjectURL(blob);
+        link.download = "open_powershell.bat";
+        link.click();
+      }).catch(err => {
+        alert("Ошибка копирования: " + err);
+      });
+    }
+  </script>
+</body>
+</html>
